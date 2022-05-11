@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 
 # обработчик опции в функции
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default=None,
+    parser.addoption('--language', action='store', default="en",
                      help="Choose language: ru, en, ...etc")
 
 # фикстура которая будет выполняться для метода теста до и после
@@ -22,5 +22,6 @@ def browser(request):
     yield browser
     # закрываем браузер
     browser.quit()
-    # тест запускать командой pytest -s -v --language=es test_items.py где language - значение для языка
+
+
 

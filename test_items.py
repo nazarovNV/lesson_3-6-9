@@ -13,4 +13,5 @@ def test_buy_button_existence(browser):
     time.sleep(30)
     # проверяем что список buy_button не пустой
     assert len(buy_button) != 0, "Should not be empty"
+    # тест запускать командой pytest -s -v --language=es test_items.py где language - значение для языка
 
